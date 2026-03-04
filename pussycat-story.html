@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Madame Marmalade's Midnight Escapades</title>
+    <style>
+      :root {
+        --ink: #1d1a14;
+        --cream: #f6efdf;
+        --amber: #f5b642;
+        --scarlet: #d1493f;
+        --peacock: #0e6e6b;
+        --plum: #6a2d5c;
+        --shadow: rgba(10, 8, 6, 0.2);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(1200px 500px at 80% -10%, rgba(245, 182, 66, 0.25), transparent 60%),
+          radial-gradient(900px 600px at 10% 10%, rgba(14, 110, 107, 0.2), transparent 55%),
+          linear-gradient(145deg, #f8f1e5, #f2e2c5);
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        line-height: 1.6;
+      }
+
+      .page {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 56px 20px 72px;
+      }
+
+      .story-card {
+        width: min(900px, 100%);
+        background: var(--cream);
+        border: 2px solid rgba(29, 26, 20, 0.12);
+        border-radius: 24px;
+        box-shadow:
+          0 18px 40px var(--shadow),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+        padding: clamp(28px, 5vw, 56px);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .story-card::before,
+      .story-card::after {
+        content: "";
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        opacity: 0.15;
+        filter: blur(2px);
+      }
+
+      .story-card::before {
+        background: var(--scarlet);
+        top: -70px;
+        right: -60px;
+      }
+
+      .story-card::after {
+        background: var(--peacock);
+        bottom: -80px;
+        left: -40px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 28px;
+      }
+
+      h1 {
+        font-family: "Copperplate", "Palatino Linotype", serif;
+        font-size: clamp(2.1rem, 4vw, 3.2rem);
+        letter-spacing: 0.04em;
+        margin: 0 0 8px;
+      }
+
+      .subtitle {
+        font-family: "Trebuchet MS", "Gill Sans", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-size: 0.75rem;
+        color: var(--plum);
+      }
+
+      .story {
+        font-size: clamp(1.02rem, 1.5vw, 1.18rem);
+      }
+
+      .story p {
+        margin: 0 0 18px;
+      }
+
+      .story p:last-child {
+        margin-bottom: 0;
+      }
+
+      .accent {
+        color: var(--plum);
+        font-weight: 700;
+      }
+
+      .divider {
+        height: 2px;
+        width: 90px;
+        margin: 20px auto 28px;
+        background: linear-gradient(90deg, transparent, var(--amber), transparent);
+        border-radius: 999px;
+      }
+
+      .tagline {
+        margin-top: 28px;
+        padding-top: 18px;
+        border-top: 1px dashed rgba(29, 26, 20, 0.2);
+        font-style: italic;
+        text-align: center;
+      }
+
+      @media (max-width: 600px) {
+        .story-card {
+          border-radius: 18px;
+        }
+
+        .subtitle {
+          letter-spacing: 0.16em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <article class="story-card">
+        <header>
+          <div class="subtitle">A Velvet-Pawed Tale</div>
+          <h1>Madame Marmalade's Midnight Escapades</h1>
+          <div class="divider" role="presentation"></div>
+        </header>
+        <section class="story">
+          <p>
+            In the sleepy city of Sunspoke, there lived a pussycat with whiskers like
+            silver quills and a reputation as wide as the moon. Madame Marmalade was a
+            tiny ball of ginger fluff, but she carried herself like a duchess who owned
+            every rooftop. By day she lounged in the bakery window, accepting tributes
+            of butter biscuits. By night she slipped into the alleys with a swish of her
+            tail, chasing secrets the way other cats chase yarn.
+          </p>
+          <p>
+            One night, a carnival rolled in, bright as a spilled jewel box. The music
+            climbed the chimneys, and the air smelled of candied almonds and mischief.
+            Marmalade followed the drums to the big tent, where a fortune-teller's
+            parrot was sulking because his crystal ball had been stolen. Marmalade, who
+            loved a mystery almost as much as a warm windowsill, promised to find it.
+            She sashed through the midway with the <span class="accent">confidence of a queen</span>,
+            gathering clues: a trail of glitter, a half-eaten churro, and a faint giggle
+            from the Hall of Mirrors.
+          </p>
+          <p>
+            Inside the mirrors, her reflection multiplied into a chorus of cats.
+            Marmalade padded along, ears swiveling, until she spotted a tiny raccoon
+            in a velvet cape, clutching the crystal ball like a forbidden snack. He
+            confessed he only wanted a better bedtime story. Marmalade blinked slowly
+            and struck a deal. She would return the ball, but in exchange the raccoon
+            would bring the parrot a fresh mango and a promise to share the story too.
+            Deals were her specialty; she had negotiated salmon from three rival fish
+            stalls and once convinced the mayor's dog to give back a stolen boot.
+          </p>
+          <p>
+            The carnival erupted in cheers when the crystal ball returned, and the
+            fortune-teller declared Marmalade "Keeper of Curious Nights." In her honor,
+            the baker baked a tart shaped like a moon. Marmalade accepted it with a
+            dignified nod, then slipped back to her window, the city humming behind her.
+            She curled up on her velvet cushion, eyes gleaming, already plotting her
+            next adventure. After all, in Sunspoke, the night belonged to her.
+          </p>
+        </section>
+        <div class="tagline">
+          Keep your ear to the alleyways. Madame Marmalade never naps without a plan.
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
